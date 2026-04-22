@@ -6,3 +6,6 @@ def index(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def advantages(request):
+    return render(request, 'advantages.html')
