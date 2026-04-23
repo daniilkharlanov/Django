@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Цены{% endblock %}
+
+{% block content %}
+<div class="container py-3">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">Цены</h1>
+        <p class="fs-5 text-body-secondary">Здесь вы можете увидеть план обучения, и его стоимость.</p>
+    </div>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Школьникам</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0<small
+                                class="text-body-secondary fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Основы алгоритмизации и Python</li>
+                            <li>Разработка веб-страниц</li>
+                            <li>Подготовка к ОГЭ и ЕГЭ</li>
+                            <li>Проектная деятельность</li>
+                        </ul> <button type="button" class="w-100 btn btn-lg btn-outline-primary">Связаться</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Студентам</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0<small
+                                class="text-body-secondary fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Backend-разработка на Python</li>
+                            <li>Архитектура веб-приложений (Frontend)</li>
+                            <li>Проектирование баз данных (SQL)</li>
+                            <li>Работа с Git и командная разработка</li>
+                        </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Связаться</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Пeдагогам</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0<small
+                                class="text-body-secondary fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Методика преподавания Python</li>
+                            <li>Банк готовых практических задач</li>
+                            <li>Автоматизация проверки кода</li>
+                            <li>Интеграция ИИ в учебный процесс</li>
+                        </ul> <button type="button" class="w-100 btn btn-lg btn-primary">Связаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

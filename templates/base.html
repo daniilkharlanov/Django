@@ -31,12 +31,24 @@ family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a href="{% url 'home' %}" class="nav-link active" aria-current="page">Главная</a>
+                    <a href="{% url 'home' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Главная</a>
                 </li>
-                <li class="nav-item"><a href="{% url 'аdvantages' %}" class="nav-link">Преимущества</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Цены</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">О сайте</a></li>
+                <li class="nav-item">
+                    <a href="{% url 'advantages' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'advantages' %}active{% endif %}">
+                        Преимущества
+                    </a>
+                </li>
+                <li class="nav-item"><a href="{% url 'prices' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'prices' %}active{% endif %}">Цены</a>
+                </li>
+                <li class="nav-item"><a href="{% url 'faqs' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'faqs' %}active{% endif %}">FAQs</a>
+                </li>
+                <li class="nav-item"><a href="{% url 'about' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">О
+                        сайте</a></li>
             </ul>
         </header>
     </div>
@@ -47,11 +59,19 @@ family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
         {% endblock %}
 
     </main>
-    <footer>
-        <p style="text-align: center;">&copy; 2026 Мой Django Проект</p>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="{% url 'home' %}" class="nav-link px-2 text-body-secondary">Главная</a></li>
+            <li class="nav-item"><a href="{% url 'advantages' %}" class="nav-link px-2 text-body-secondary">Преимущества</a></li>
+            <li class="nav-item"><a href="{% url 'prices' %}" class="nav-link px-2 text-body-secondary">Цены</a></li>
+            <li class="nav-item"><a href="{% url 'faqs' %}" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="{% url 'about' %}" class="nav-link px-2 text-body-secondary">О сайте</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2026 Company, Inc</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
